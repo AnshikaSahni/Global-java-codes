@@ -1,0 +1,196 @@
+
+
+ 1)TableName: Employee
+
+
+
+ Test the table creation by viewing the structure using describe command
+
+*************************************************************************
+
+ EMPLOYEE_ID int(6)
+
+ FIRST_NAME VARCHAR(20)
+
+ LAST_NAME VARCHAR(25)
+
+ DEPARTMENT_ID int(4)
+
+ SALARY double
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+ Answer-1
+ create table employee ( employee_id int, first_name varchar(20),last_name varchar(20),department_iD int(4),salary double);
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+  2) Insert one record without listing the column names in the insert statement. Check whether data is inserted
+
+  Eg:
+
+  employee_id first_name last_name department_id salary
+
+  201 Michael Hartstein 20 13000
+
+
+
+ 
+ ------------------------------------------------------------------------
+
+  Answer-2
+  insert into employee (201, 'Michael', 'Hartstei', 20, 13000);
+
+ ------------------------------------------------------------------------
+
+
+
+
+
+  3)
+
+  Insert one record with listing the column names in the insert statement where salary value remain undetermined. Check whether data is inserted
+
+  Eg:
+
+  employee_id first_name last_name department_id salary
+
+  201 Michael Hartstein 20 13000
+
+  202 Pat Fay 20 (null)
+
+
+
+---------------------------------------------------------------------------------------------------------
+  Answer-3
+  insert into employee (employee_id,first_name,last_name,department_id)  values(202, 'Pat', 'fay', 20); 
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+  4)
+
+  Insert one record without listing the column names avoiding salary column in the insert statement where salary value remain undetermined. Check whether data is inserted
+
+  employee_id first_name last_name department_id salary
+
+  201 Michael Hartstein 20 13000
+
+  202 Pat Fay 20 (null)
+
+  203 Susan Mavris 40 (null)
+
+
+
+
+
+------------------------------------------------------------------
+  Answer-4
+  insert into employee  values(202,'susan', 'mavris', 40,null);
+
+-----------------------------------------------------------------
+
+
+
+
+
+  5)
+
+  Use the above Script to insert the below given records
+
+  employee_id first_name last_name department_id salary
+
+  205 Shelley Higgins 110 12000
+
+  100 Steven King 90 24000
+
+  101 Neena Kochhar 90 17000
+
+  102 Lex De Haan 90 17000
+
+  111 Ismael Sciarra 100 7700
+
+  112 Jose Manuel Urman 100 7800
+
+  204 Hermann Baer 70 10000
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+  Answer-5
+  insert into employee values( 205 ,'Shelley' ,'Higgins', 110, 12000),(100 ,'Steven', 'King', 90, 24000),
+  ( 101, 'Neena', 'Kochhar', 90, 17000),( 102, 'Lex De', 'Haan' ,90 ,17000),( 204, 'Hermann', 'Baer', 70, 10000);
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+  6)
+
+  Create a query to increase salary by 10% for all employees in dept 90.
+
+
+
+
+--------------------------------------------------------------------------------
+
+  Answer-6
+
+  update employee set salary=salary+(salary*10/100) where department_id=90;
+
+--------------------------------------------------------------------------------
+
+
+
+
+  7)
+
+  Create a query to update Last_name of emp 202 to Higgins.
+
+
+
+
+--------------------------------------------------------------------
+  Answer-7
+
+  update employee set last_name='higgins' where employee_id=202;
+
+--------------------------------------------------------------------
+
+
+
+
+
+ 8)
+
+  Delete employees whose name either first or last name has char seq of ‘man’
+
+
+
+----------------------------------------------------------------------------------
+
+  Answer-8
+  delete from employee where first_name like '%man%' or last_name like '%man%'
+----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+  
