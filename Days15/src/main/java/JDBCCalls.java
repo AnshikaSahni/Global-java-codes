@@ -1,4 +1,4 @@
-import java.sql.SQLException;
+
 
 /*Develop a jdbc program containing the main method, which should instantiate a class called DAOClass, which should contain methods called insert, delete, modify and display. Description of what each of these methods are expected to do is given below. Necessary details required for executing these methods are passed from command line argument. For e.g. If the name of the class containing the main method is JDBCCalls, then if you want to insert a record, you will execute this class as java JDBCCalls 1 101 “Ajit” “IV” “20-Nov-2001” 4000
 
@@ -9,6 +9,7 @@ For Displaying records, if the main class is executed as follows java JDBCCalls 
 
 If the main class is executed as java JDBCCalls 4 (without specifying the rollno.), it means that details of all the students should be displayed.
 */
+import java.sql.SQLException;
 public class JDBCCalls {
 	
 
